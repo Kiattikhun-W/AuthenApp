@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './scss/index.scss'
 import { BrowserRouter } from 'react-router-dom';
+import { StyledEngineProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <StyledEngineProvider injectFirst>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StyledEngineProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
