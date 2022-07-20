@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Login from './page/Login';
+import Login from './page/Login2';
 function App() {
   return (
     <React.Fragment>

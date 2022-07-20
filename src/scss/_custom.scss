@@ -1,13 +1,16 @@
-body {
-  @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap");
-}
+//body {
+//  @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap");
+//}
+
 body {
   font-family: "Kanit" !important;
   background-color: #e5e5e5;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  padding: 0;
+  //height: 100vh;
+  //width: 100vw;
 }
+
 .box {
   width: 30rem;
   height: 30rem;
