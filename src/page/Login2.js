@@ -3,48 +3,57 @@ import {
     Card,
     Grid,
     CardContent,
-    Typography,
-    Container,
-    CardHeader,
-    Button,
-    TextField,
-    FormControl
+    Button, FormControl, TextField, Box,
 } from "@mui/material";
-import InputCus from "../components/utils/InputCus";
+import Logo from '../assets/login.png'
 
 const Login = (props) => {
     return (
-        <React.Fragment>
-            <div className='flex justify-center items-center bg-red-400  '>
-                <Card variant="outlined" className='shadow w-full md:w-2/4 m-2'>
-                    <div className=' text-3xl font-bold '>
-                        <div className='text-center'>Login</div>
+        <div>
+            <Grid container>
+                <Grid item xs={12} md={6}>
+                    <div className={`bg-green-500  md:h-screen  md:block`}>
                     </div>
-                    <CardContent>
-                        <div className='grid grid grid-rows-2 '>
-                            <FormControl className={``}>
-                                <InputCus
-                                    hiddenLabel
-                                    id="filled-hidden-label-small"
-                                    defaultValue="Small"
-                                    variant="filled"
-                                />
-                                <InputCus
-                                    hiddenLabel
-                                    id="filled-hidden-label-small"
-                                    defaultValue="Small"
-                                    variant="filled"
-                                />
-                                <Button variant="contained" color="success">
-                                    Login
-                                </Button>
-                            </FormControl>
-                        </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <div className='flex justify-center items-start md:items-center h-screen md:bg-transparent'>
+                        <Card variant="outlined" className='drop-shadow-lg w-96 m-3 '>
+                            <div className=' text-3xl font-bold mt-2'>
+                                <div className='text-center'>Login</div>
+                            </div>
+                            <CardContent>
+                                <Box
+                                    component="form"
+                                    sx={{
+                                        '& .MuiTextField-root': {my: 1, width: '100%'},
+                                    }}
+                                    noValidate
+                                    autoComplete="off"
+                                >
+                                    <TextField
+                                        hiddenLabel
+                                        // type={'text'}
+                                        placeholder="Your Username"
+                                        label="Username"
+                                        size="small"
+                                    />
+                                    <TextField
+                                        type={'password'}
+                                        placeholder="Your Password"
+                                        label="Password"
+                                        size="small"
+                                    />
+                                    <Button className={'w-full'} variant="contained" className='bg-green-500 w-full'>
+                                        Login
+                                    </Button>
+                                </Box>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Grid>
+            </Grid>
+        </div>
 
-                    </CardContent>
-                </Card>
-            </div>
-        </React.Fragment>
     )
 }
 export default Login
